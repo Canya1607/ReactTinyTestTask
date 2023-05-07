@@ -1,0 +1,98 @@
+.Card {
+  display: flex;
+  flex-direction: row;
+  gap: 32px;
+  padding: 40px 72px 40px 40px;
+  background-color: #ffffff;
+  border-radius: 16px;
+  width: 100%;
+  box-sizing: border-box;
+
+  /* Remove */
+  /* margin-top: 36px; */
+}
+
+.CardImage {
+  width: 128px;
+  height: 144px;
+}
+
+.CardRepoInfo {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.CardRepoName {
+  font-family: "DM Serif Display", serif;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 25px;
+  color: #081f32;
+
+  margin-bottom: 8px;
+}
+
+.CardRepoAuthor {
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 25px;
+  color: #a5adbb;
+
+  margin-bottom: 2px;
+}
+
+.CardRepoLang {
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 25px;
+  color: #a5adbb;
+
+  margin-bottom: 6px;
+}
+
+.CardRepoDesc {
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 25px;
+  color: #6e798c;
+}
+
+.CardRepoStats {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 16px;
+}
+
+.CardRepoStatsRow {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 16px;
+}
+
+.CardSvgWrapper {
+  width: 32px;
+  height: 32px;
+}
+
+.CardRepoStatsInfo {
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 25px;
+  color: #081f32;
+}
+
+.CardRepoStatsInfo > span {
+  color: #6E798C;
+}

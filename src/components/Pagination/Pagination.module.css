@@ -1,0 +1,45 @@
+.Pagination {
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+
+  /* Remove */
+  margin-top: 16px;
+}
+
+.PaginationNav {
+  font-family: "Archivo", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 20px;
+  color: #000000;
+
+  cursor: pointer;
+  user-select: none;
+}
+
+
+.PaginationPages {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+}
+
+.PaginationPagesNumber {
+  width: 30px;
+  height: 30px;
+  font-family: "Archivo", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 20px;
+  color: #000000;
+
+  cursor: pointer;
+  user-select: none;
+}
+
+.PaginationPagesNumberActive {
+  border-bottom: 3px solid #65B79A;
+}
