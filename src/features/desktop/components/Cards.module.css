@@ -1,0 +1,13 @@
+.Cards {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+  padding-bottom: 36px;
+}
+
+.CardsNotFound {
+  text-align: center;
+  margin-top: 32px;
+  font-weight: bold;
+}

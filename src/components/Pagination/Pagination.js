@@ -22,7 +22,7 @@ export const Pagination = ({ maxPage, pageNumber, onPageNumberChange }) => {
             let className = styles.PaginationPagesNumber;
             if (page === pageNumber) className = className + " " + styles.PaginationPagesNumberActive;
             return (
-              <p className={className} onClick={() => onPageNumberChange(page)}>
+              <p key={`page-${index + 1}`} className={className} onClick={() => onPageNumberChange(page)}>
                 {page}
               </p>
             );

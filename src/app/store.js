@@ -1,5 +1,8 @@
-import { configureStore } from '@reduxjs/toolkit';
+import { configureStore } from "@reduxjs/toolkit";
+import desktopReducer from "../features/desktop/desktopSlice";
 
 export const store = configureStore({
-  reducer: {},
+  reducer: {
+    desktop: desktopReducer,
+  },
 });
