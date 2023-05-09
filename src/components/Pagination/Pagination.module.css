@@ -16,6 +16,12 @@
   user-select: none;
 }
 
+.PaginationNavInActive {
+  opacity: 0.25;
+
+  cursor: inherit;
+}
+
 
 .PaginationPages {
   display: flex;

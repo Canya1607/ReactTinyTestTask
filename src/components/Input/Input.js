@@ -2,7 +2,6 @@ import styles from './Input.module.css';
 
 export const Input = ({value, onChange}) => {
   const onHandleChange = (e) => {
-    e.preventDefault();
     onChange(e.target.value);
   }
 

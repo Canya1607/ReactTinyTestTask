@@ -1,6 +1,11 @@
 import styles from "./Pagination.module.css";
 
-export const Pagination = ({ maxPage, pageNumber, onPageNumberChange }) => {
+export const Pagination = ({ pageNumber, maxPage, onPageNumberChange }) => {
+  let prevClassName = styles.PaginationNav;
+  let nextClassName = styles.PaginationNav;
+  if (pageNumber === 1) prevClassName = prevClassName + " " + styles.PaginationNavInActive;
+  if (pageNumber === maxPage) nextClassName = nextClassName + " " + styles.PaginationNavInActive;
+
   const onPreviousClick = () => {
     if (pageNumber > 1) onPageNumberChange(pageNumber - 1);
   };
@@ -11,7 +16,7 @@ export const Pagination = ({ maxPage, pageNumber, onPageNumberChange }) => {
 
   return (
     <div className={styles.Pagination}>
-      <p className={styles.PaginationNav} onClick={onPreviousClick}>
+      <p className={prevClassName} onClick={onPreviousClick}>
         Previous
       </p>
       <div className={styles.PaginationPages}>
@@ -28,7 +33,7 @@ export const Pagination = ({ maxPage, pageNumber, onPageNumberChange }) => {
             );
           })}
       </div>
-      <p className={styles.PaginationNav} onClick={onNextClick}>
+      <p className={nextClassName} onClick={onNextClick}>
         Next
       </p>
     </div>

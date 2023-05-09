@@ -2,38 +2,33 @@ import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import { getRepos } from "../../api/search";
 
 const initialState = {
-  items: [],
   pageItems: [],
-  maxPage: 0,
 };
 
 // Async
-export const fetchPageItems = createAsyncThunk("desktop/fetchPageItems", async ({ input, maxCount }) => {
-  const response = await getRepos(input, maxCount);
-  if (response.status === 200) {
+export const fetchPageItems = createAsyncThunk("desktop/fetchPageItems", async ({ q, per_page, page }) => {
+  try {
+    const response = await getRepos(q, per_page, page);
     return response.data.items;
+  } catch (e) {
+    return [];
   }
 });
 
 export const desktopSlice = createSlice({
   name: "desktop",
   initialState,
-  reducers: {
-    setPageItems: (state, action) => {
-      state.pageItems = [...action.payload.pageItems];
-    },
-  },
+  reducers: {},
   extraReducers: (builder) => {
     builder.addCase(fetchPageItems.fulfilled, (state, action) => {
       if (action.payload) {
-        state.items = [...action.payload];
+        state.pageItems = [...action.payload];
       }
     });
   },
 });
 
 // Actions
-export const { setPageItems } = desktopSlice.actions;
 
 // Selectors
 export const selectItems = (state) => state.desktop.items;
